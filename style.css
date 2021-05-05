@@ -1,0 +1,602 @@
+:root {
+    --main-color: #b32626;
+    --main-color-hover: rgba(0, 0, 0, 0.3);
+}
+
+.space{height: 2.5vh;}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+    font-family:'Roboto', sans-serif;
+}
+
+.main{
+    max-width:4096px;
+    margin:0 auto;
+    position:relative;
+    min-height:100%;
+    margin-top: 50px;
+}
+
+
+/*  NAVBAR  */
+
+.nav {
+    height: 80px;
+    width: 100%;
+    background-color: var(--main-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 25px 10px 13px 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav > .nav-links > a:hover{
+    color: black;
+    background-color: var(--main-color-hover);
+    transition: all 0.5S;
+    height: 80px;
+}
+
+.nav > #nav-check {
+    display: none;
+}
+
+.nav > .nav-header {
+    display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 28px;
+    color: white;
+    padding: 22px 10px 13px 10px;
+    font-weight: bold;
+    margin-left: 35px;
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 45px;
+}
+
+
+
+/* PREMIERE PAGE */
+
+.entete{
+    min-height: 95vh;
+    background-image: url(./images/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    display: flex;
+    top: 0;left: 0;right: 0;bottom: 0;
+    margin: 0 auto;
+    padding-top: 6.5% ;
+    width: 20vh;
+}
+
+.slogan{
+    display: flex;
+    top: 0;left: 0;right: 0;bottom: 0;
+    margin: 0 auto;
+    padding-top: 5%;
+    width: 100%;
+    justify-content: center;
+}
+
+.sloganP{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+}
+
+.btnSlogan{
+    display: flex;
+    justify-content: center;
+    padding-top: 8%;
+    padding-bottom: 1%;
+}
+
+#btnSlogan{
+    width: 550px;
+    height: 80px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 100;
+    font-family: 'roboto';
+    font-size: 18px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border:0px;
+}
+
+#btnSlogan:hover{
+    background-color: tomato;
+    cursor: pointer;
+    transition: background-color ease 0.5s;
+}
+
+
+
+/* DEUXIEME PAGE */
+
+.ourwork{
+    min-height: 95vh;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ourWorksDiv{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 2%;
+    width: 25%;
+    font-size: 1em;
+    font-weight: 200;
+    text-align: center;
+}
+
+.ourWorksH1{
+    font-size: 50PX;
+    text-align: center;
+    font-weight: 300;
+}
+
+.galerie{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    width: 80%;
+    flex-wrap: wrap;
+    padding-top: 2%;
+}
+
+#galImg{
+    display: flex;
+    margin: 1.5% auto;
+    background-color: var(--main-color);
+    background-image: url(./plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+
+#galImg:hover img{
+    opacity: 0.2;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+/* TROISIEME PAGE */
+
+.pricing{
+    min-height: 95vh;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricingDiv{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 2%;
+    width: 25%;
+    font-size: 1em;
+    font-weight: 200;
+    text-align: center;
+}
+
+.pricingH1{
+    font-size: 50PX;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* TABLEAU DES PRIX */
+
+.pricingTab{
+    display: flex;
+    margin: 0 auto;
+    width: 50vw;
+    font-weight: 300;
+    justify-content: space-between;
+    padding-top: 5vh;
+    flex-wrap: wrap;
+}
+
+#pricingTitle{
+    border-bottom: rgb(209, 207, 207) 1px solid;
+    text-align: center;
+    font-size: 1.4em;
+    background-color: lightgray;
+    padding-top: 5%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-inline: 1px solid rgb(185, 185, 185);
+}
+
+#pricingTitleG{
+    border-bottom: rgb(132, 157, 238) 1px solid;
+    text-align: center;
+    font-size: 1.4em;
+    background-color: rgb(132, 157, 238);
+    padding-top: 5%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.month{
+    font-size: 0.6em;
+    margin-bottom: 2.5vh;
+}
+
+.pricingContent{
+    border-bottom: rgb(209, 207, 207) 1px solid;
+    text-align: center;
+    font-size: 0.8em;
+    height: 5vh;
+    margin: 2.5vh 2.5vh auto;
+}
+
+#tabs{
+    border: rgb(185, 185, 185) solid 1px;
+    border-radius: 5px;
+    width: 250px;
+    min-width: 170px;
+    box-shadow: rgb(185, 185, 185) 0px 1px 1px 1px inset;
+    margin-bottom: 2vh;
+}
+
+#tabsG{
+    border: rgb(132, 157, 238) solid 1px;
+    border-radius: 5px;
+    width: 250px;
+    min-width: 170px;
+    box-shadow: rgb(132, 157, 238) 0px 1px 1px 1px inset;
+    margin-bottom: 2vh;
+}
+
+.pricingContentG{
+    border-bottom: rgb(132, 157, 238) 1px solid;
+    text-align: center;
+    font-size: 0.8em;
+    height: 5vh;
+    margin: 2.5vh 2.5vh auto;
+}
+
+.signUpNow{
+    background-color: black;
+    color: white;
+    width: 80%;
+    text-align: center;
+    border-radius: 3px;
+    margin: 2.5vh auto;
+    font-size: 0.6em;
+    padding: 1vh;
+}
+
+.signUpNow:hover{
+    cursor: pointer;
+    background-color: tomato;
+    transition: background-color ease 0.5s;
+}
+
+.signUpNowG:hover{
+    cursor: pointer;
+    background-color: blue;
+    transition: background-color ease 0.5s;
+}
+
+.signUpNowG{
+    background-color: rgb(132, 157, 238);
+    color: white;
+    width: 80%;
+    text-align: center;
+    border-radius: 3px;
+    margin: 2.5vh auto;
+    font-size: 0.6em;
+    padding: 1vh;
+}
+
+/* QUATRIEME PAGE */
+
+.contact{
+    min-height: 85vh;
+    padding-top: 5%;
+    background-color: #2c3e50;
+}
+
+.contactDiv{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 2%;
+    width: 25%;
+    font-size: 1em;
+    font-weight: 200;
+    text-align: center;
+    color: white;
+}
+
+.contactH1{
+    font-size: 50PX;
+    text-align: center;
+    font-weight: 300;
+    color: white;
+}
+
+.contactFormDiv{
+    margin-top: 10vh;
+    width: 100vw;
+    min-height: 35vh;
+    justify-content: center;
+    display: flex;
+}
+
+.form{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.msg{
+    width: 50%;
+}
+
+#msg{
+    width: 90%;
+    height:30vh;
+    min-height: 200px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    padding-left: 5%;
+    padding-top: 1%;
+    font-size: 2em;
+}
+
+.formContact{
+    width: 50%;
+}
+
+#name{
+    width: 90%;
+    min-width: 150px;
+    height: 9vh;
+    min-height: 60px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 5%;
+    font-size: 1.5em;
+}
+
+#mail{
+    width: 90%;
+    min-width: 150px;
+    height: 9vh;
+    min-height: 60px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 5%;
+    font-size: 1.5em;
+}
+
+#direction{
+    width: 70%;
+    height: 9vh;
+    min-height: 60px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 5%;
+    font-size: 1.5em;
+}
+
+.envoi{
+    width: 19%;
+    min-width: 70px;
+    height: 9vh;
+    min-height: 60px;
+    background-color: var(--main-color);
+    border: 0;
+    border-top: 8px solid var(--main-color);
+    border-radius: 5px;
+}
+
+.envoi:hover{
+    background-color: tomato;
+    border: 5px solid tomato;
+    cursor: pointer;
+    transition: background-color AND border ease 0.5s;
+}
+
+/* CONTACT RESPONSIVE */
+
+@media (max-width:870px){
+
+    .form{
+        flex-direction: column; 
+        align-items: center;
+        margin-left: 3%;
+    }
+
+    #direction{
+        width: 90%;
+        min-width: 150px;
+        height: 60px;
+    }
+    
+    .envoi{
+        width: 90%;
+        min-width: 150px;
+        height: 60px;
+        background-color: var(--main-color);
+        border: 5px solid var(--main-color);
+    }
+}
+
+/* FOOTER */
+
+
+.copyright{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 2%;
+    font-size: 1em;
+    font-weight: 100;
+    text-align: center;
+}   
+
+.RS{
+    display: flex;
+    margin: 0 auto;
+    padding-top: 1%;
+    text-align: center;
+    left: 0;right: 0;top: 0;bottom: 0;
+    justify-content: center;
+}
+
+.facebook{
+    width: 2%;
+    height: 2%;
+    cursor: pointer;
+}
+
+.twitter{
+    width: 2%;
+    height: 2%;
+    cursor: pointer;
+}
+
+.googleplus{
+    width: 2%;
+    height: 2%;
+    cursor: pointer;
+}
+
+/*  SCROLL UP BUTTON  */
+
+#scrollUp{
+    width: 100%;
+    height: 15vh;
+    background-color: white;
+}
+
+.scrollUpImg{
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    bottom: 12.7vh;
+}
+
+#scrollUp > a{
+    display: flex;
+    justify-content: center;
+}
+
+/*  BURGER MENU  */
+
+.nav > #nav-check {
+    display: none;
+}
+
+
+@media (max-width:750px) {
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: var(--main-color-hover);
+        height: 80px;
+    }
+
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 30px;
+        height: 20px;
+        border-top: 2px solid #eee;
+    }
+
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 28%;
+        background-color: var(--main-color);
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 80px;
+        left: 72%;
+        text-align: end;
+    }
+
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav > .nav-links > a:hover {
+        height: 60px;
+    }
+
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+
+    .nav > #nav-check:checked ~ .nav-links {
+        height: 270px;
+        overflow-y: auto;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        text-align: center;
+    }
+}
